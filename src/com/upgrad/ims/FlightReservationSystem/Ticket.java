@@ -9,6 +9,28 @@ public class Ticket {
     String seatNumber;
     float price;
     boolean canceled;
+    private Flight flight;
+    private Passenger passenger;
+
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
+    }
+
+    public Ticket(Flight flight) {
+        this.flight = flight;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
+    }
 
     public void cancel(boolean canceled){
         this.canceled=canceled;
