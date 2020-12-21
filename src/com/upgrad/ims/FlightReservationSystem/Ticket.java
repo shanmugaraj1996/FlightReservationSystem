@@ -12,6 +12,17 @@ public class Ticket {
     private Flight flight;
     private Passenger passenger;
 
+    public Ticket(String pnr, String from, String to, String departureDateTime, String arrivalDateTime, String seatNumber, float price, boolean canceled) {
+        this.pnr = pnr;
+        this.from = from;
+        this.to = to;
+        this.departureDateTime = departureDateTime;
+        ArrivalDateTime = arrivalDateTime;
+        this.seatNumber = seatNumber;
+        this.price = price;
+        this.canceled = canceled;
+    }
+
     public Passenger getPassenger() {
         return passenger;
     }

@@ -8,6 +8,7 @@ public class RegularTicket extends Ticket {
     }
 
     public void updateSpecialServices(String specialServices){
+
         this.specialServices=specialServices;
     }
 }

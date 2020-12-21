@@ -6,6 +6,11 @@ public class Flight {
     private int capacity;
     private int bookedSeats;
     private Ticket ticket;
+    private Passenger passenger;
+
+    public Passenger getPassenger() {
+        return passenger;
+    }
 
     public String getFlightNumber() {
         return flightNumber;
@@ -36,7 +41,7 @@ public class Flight {
     }
 
     public void setBookedSeats(int bookedSeats) {
-        this.bookedSeats = bookedSeats;
+        this.bookedSeats = getPassenger().id;
     }
 
     public Ticket getTicket() {
