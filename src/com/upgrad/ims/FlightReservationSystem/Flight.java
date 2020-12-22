@@ -8,8 +8,21 @@ public class Flight {
     private Ticket ticket;
     private Passenger passenger;
 
-    public Passenger getPassenger() {
-        return passenger;
+    public Flight(String flightNumber, String airline, int capacity, int bookedSeats) {
+        this.flightNumber = flightNumber;
+        this.airline = airline;
+        this.capacity = capacity;
+        this.bookedSeats = bookedSeats;
+    }
+    public String checkAvailability(){
+        if(this.bookedSeats<capacity)
+            return "available";
+        else
+            return "Not Available";
+    }
+
+    public void incrementBookingCounter(){
+        this.bookedSeats++;
     }
 
     public String getFlightNumber() {
@@ -37,20 +50,10 @@ public class Flight {
     }
 
     public int getBookedSeats() {
-        return bookedSeats;
+        return passenger.getPassengerCount();
     }
 
     public void setBookedSeats(int bookedSeats) {
-        this.bookedSeats = getPassenger().id;
+        this.bookedSeats = bookedSeats;
     }
-
-    public Ticket getTicket() {
-        return ticket;
-    }
-
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
-    }
-
-
 }
